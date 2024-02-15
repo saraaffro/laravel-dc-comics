@@ -7,11 +7,10 @@
     <ul>
         @foreach ($comics as $comic)
             <li>
-                Title: {{$comic -> title}}
-                <br>
-                Description: {{$comic -> description}}
-                <br>
-                {{$comic -> price}} &euro;
+                <a href="{{ route('comics.show', $comic -> id)}}">
+                    Title: {{$comic -> title}}
+                </a>
+                
             </li>
         @endforeach
     </ul>
