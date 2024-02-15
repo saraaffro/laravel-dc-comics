@@ -5,16 +5,24 @@
 @section('content')
     <h1>New Comic:</h1>
    
-    <h3>Title</h3>
-    <input type="text" name="title" id="title">
+    <form action="{{ route('comics.store') }}" method="POST">
 
-    <h3>Description</h3>
-    <input type="text" name="decsription" id="decsription">
+        @csrf
+        @method('POST')
+        
+        
+        <h3>Title</h3>
+        <input type="text" name="title" id="title">
     
-    <h3>Price</h3>    
-    <input type="text" name="price" id="price">
-
-    <br>
-    <br>
-    <input type="submit" value="CREATE">
+        <h3>Description</h3>
+        <input type="text" name="description" id="description">
+        
+        <h3>Price</h3>    
+        <input type="text" name="price" id="price">
+    
+        <br>
+        <br>
+        <input type="submit" value="CREATE">
+    </form>
+   
 @endsection
