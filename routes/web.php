@@ -16,3 +16,5 @@ Route::post('/comics', [ComicController :: class, 'store'])
 Route::get('/comics/{id}', [ComicController :: class, 'show'])
     -> name('comics.show');
 
+Route::delete('/comics/{id}', [ComicController :: class, 'destroy']) 
+    -> name('comics.destroy');
