@@ -10,8 +10,11 @@
     <ul>
         @foreach ($comics as $comic)
             <li>
-                <a href="{{ route('comics.show', $comic -> id)}}">
+                <a href="{{ route('comics.show', $comic -> id) }}">
                     Title: {{$comic -> title}}
+                </a>
+                <a href="{{ route('comics.edit', $comic -> id) }}" class="edit">
+                    EDIT
                 </a>
                 <form action="{{route('comics.destroy', $comic -> id) }}" method="POST" class="d-inline-block">
 
