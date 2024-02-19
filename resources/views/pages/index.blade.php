@@ -20,7 +20,7 @@
 
                     @csrf
                     @method('DELETE')
-                    <input type="submit" value="X"> 
+                    <input type="submit" value="X" onclick="return confirm('Confermare eliminazione?')"> 
                 </form>
             </li>
         @endforeach
