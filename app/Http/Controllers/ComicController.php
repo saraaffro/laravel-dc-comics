@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Models\Comic;
 
+use App\Http\Requests\ComicsStoreRequest;
+
 class ComicController extends Controller
 {
     /**
@@ -36,7 +38,7 @@ class ComicController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ComicsStoreRequest $request)
     {
         $data = $request -> all();
 
@@ -84,7 +86,7 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ComicsStoreRequest $request, $id)
     {
         $comic = Comic :: find($id);
 
